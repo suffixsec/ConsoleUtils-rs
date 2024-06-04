@@ -15,7 +15,7 @@ pub fn gradient(text: &str, start_color: RGB, end_color: RGB) {
         let current_b = (start_color.b as f64 * (1.0 - step * i as f64) + end_color.b as f64 * (step * i as f64)) as u8;
 
         let current_color = RGB::new(current_r, current_g, current_b);
-        rgb(format!("{}", ch.as_str()), current_color);
+        rgb(format!("{}", ch).as_str(), current_color);
     }
 
     reset_text_color();
