@@ -1,7 +1,7 @@
 use crate::color::{RGB, set_text_color, reset_text_color};
 
 pub fn RGB(prompt: &str, color: RGB) {
-    set_text_color(RGB);
+    set_text_color(color);
     println!("{}", prompt);
     reset_text_color();
 }
