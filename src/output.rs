@@ -1,9 +1,9 @@
-use crate::color::{RGB, SetTextColor, ResetTextColor};
+use crate::color::{RGB, set_text_color, reset_text_color};
 
 pub fn RGB(prompt: &str, color: RGB) {
-    SetTextColor(RGB);
+    set_text_color(RGB);
     println!("{}", prompt);
-    ResetTextColor();
+    reset_text_color();
 }
 
 pub fn Gradient(text: &str, start_color: RGB, end_color: RGB) {
@@ -15,10 +15,10 @@ pub fn Gradient(text: &str, start_color: RGB, end_color: RGB) {
         let current_b = (start_color.b as f64 * (1.0 - step * i as f64) + end_color.b as f64 * (step * i as f64)) as u8;
 
         let current_color = RGB::new(current_r, current_g, current_b);
-        SetTextColor(current_color);
+        set_text_color(current_color);
 
         print!("{}", ch);
     }
 
-    ResetTextColor();
+    reset_text_color();
 }

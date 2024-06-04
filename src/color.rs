@@ -10,10 +10,10 @@ impl RGB {
     }
 }
 
-pub fn SetTextColor(color: RGB) {
+pub fn set_text_color(color: RGB) {
     print!("\x1b[38;2;{};{};{}m", color.r, color.g, color.b);
 }
 
-pub fn ResetTextColor() {
+pub fn reset_text_color() {
     print!("\x1b[0m");
 }
