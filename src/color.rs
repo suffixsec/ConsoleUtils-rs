@@ -11,9 +11,9 @@ impl RGB {
 }
 
 pub fn SetTextColor(color: RGB) {
-    print!("\033[38;2;{};{};{}m", color.r, color.g, color.b);
+    print!("\x1b[38;2;{};{};{}m", color.r, color.g, color.b);
 }
 
 pub fn ResetTextColor() {
-    print!("\033[0m");
+    print!("\x1b[0m");
 }
