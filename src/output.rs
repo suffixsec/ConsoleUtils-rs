@@ -1,12 +1,12 @@
 use crate::color::{RGB, set_text_color, reset_text_color};
 
-pub fn RGB(prompt: &str, color: RGB) {
+pub fn rgb(prompt: &str, color: RGB) {
     set_text_color(color);
     println!("{}", prompt);
     reset_text_color();
 }
 
-pub fn Gradient(text: &str, start_color: RGB, end_color: RGB) {
+pub fn gradient(text: &str, start_color: RGB, end_color: RGB) {
     let step = 1.0 / (text.len() - 1) as f64;
 
     for (i, ch) in text.chars().enumerate() {
