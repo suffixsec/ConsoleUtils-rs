@@ -1,0 +1,11 @@
+[package]
+name = "ConsoleUtils"
+version = "0.1.0"
+edition = "2021"
+authors = ["suffix"]
+description = "A Rust crate for handling console input and output utilities."
+license = "MIT"
+repository = "https://github.com/suffixsec/ConsoleUtils-rs"
+homepage = "https://github.com/suffixsec/ConsoleUtils-rs"
+
+[dependencies]
