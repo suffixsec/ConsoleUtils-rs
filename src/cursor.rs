@@ -14,29 +14,31 @@ impl Visibility {
     }
 }
 
-pub struct Move {
-    pub fn Up(num: i32) {
+pub struct Move;
+
+impl Move {
+    pub fn cursor_up(num: i32) {
         if num > 0 {
             print!("\x1b[{}A", num);
             flush_console();
         }
     }
 
-    pub fn Down(num: i32) {
+    pub fn cursor_down(num: i32) {
         if num > 0 {
             print!("\x1b[{}B", num);
             flush_console();
         }
     }
 
-    pub fn Left(num: i32) {
+    pub fn cursor_left(num: i32) {
         if num > 0 {
             print!("\x1b[{}D", num);
             flush_console();
         }
     }
 
-    pub fn Right(num: i32) {
+    pub fn cursor_right(num: i32) {
         if num > 0 {
             print!("\x1b[{}C", num);
             flush_console();

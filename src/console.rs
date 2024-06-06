@@ -10,7 +10,7 @@ pub fn clear_line() {
 }
 
 pub fn clear_lines(num: i32) {
-    for _ in 0..i {
+    for _ in 0..num {
         print!("\r\x1b[2K");
         flush_console();
     }

@@ -2,6 +2,8 @@ use crate::color::RGB;
 use crate::output::{print_gradient, print_rgb};
 use crate::console::flush_console;
 
+use std::io;
+
 pub fn input(prompt: &str) -> String {
     print!("{}", prompt);
     flush_console();
