@@ -1,5 +1,6 @@
 use crate::color::RGB;
 use crate::output::{print_gradient, print_rgb};
+use std::io::{self, Write};
 
 pub fn input(prompt: &str) -> String {
     print!("{}", prompt);
@@ -11,7 +12,7 @@ pub fn input(prompt: &str) -> String {
 }
 
 pub fn input_rgb(prompt: &str, color: RGB) -> String {
-    print_rgb(format!("{}", prompt), color);
+    print_rgb(format!("{}", prompt).as_str(), color);
     io::stdout().flush().expect("Failed to flush stdout");
 
     let mut input = String::new();
@@ -20,7 +21,7 @@ pub fn input_rgb(prompt: &str, color: RGB) -> String {
 }
 
 pub fn input_gradient(prompt: &str, start_color: RGB, end_color: RGB) -> String {
-    print_rgb(format!("{}", prompt), start_color, end_color);
+    print_gradient(format!("{}", prompt).as_str(), start_color, end_color);
     io::stdout().flush().expect("Failed to flush stdout");
 
     let mut input = String::new();
